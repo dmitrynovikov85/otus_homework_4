@@ -66,8 +66,8 @@ const addProduct = (product) => {
       <router-link :to="{ path: `/` }">
         <div class="wrapper_nav">Home</div>
       </router-link>
-      <router-link :to="{ path: `/` }" v-if="checkAuth">
-        <div class="wrapper_nav">Add product</div>
+      <router-link :to="{ path: `/add_new_product` }" v-if="checkAuth">
+        <div class="wrapper_nav">Add New Product</div>
       </router-link>
     </div>
     <div style="display: flex">
@@ -87,7 +87,6 @@ const addProduct = (product) => {
     style="
       display: flex;
       align-items: center;
-      justify-content: space-between;
       justify-content: center;
       font-size: 30px;
       margin: 50px 20px 0;
