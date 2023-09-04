@@ -25,31 +25,18 @@ const logout = () => {
   router.push("/");
 };
 const search = (filterPrice, filterProduct) => {
-  if (filterPrice && filterProduct) {
-    filteredProductList.value = filteredProductList.value.filter(
-      (product) =>
-        product.title.toLowerCase().includes(filterProduct) &&
-        +product.price === +filterPrice
-    );
-    return;
-  }
   if (filterPrice) {
     filteredProductList.value = filteredProductList.value.filter(
       (product) => +product.price === +filterPrice
     );
-    return;
   }
   if (filterProduct) {
     filteredProductList.value = filteredProductList.value.filter((product) =>
       product.title.toLowerCase().includes(filterProduct)
     );
-    return;
   }
-  filteredProductList.value = productList.value;
 };
-const addProduct = (product) => {
-
-};
+const addProduct = (product) => {};
 </script>
 
 <template>
