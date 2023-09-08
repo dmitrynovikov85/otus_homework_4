@@ -48,9 +48,9 @@ const routes = [
     props: true,
     beforeEnter: (to, from, next) => {
       if (localStorage.getItem("isAuth")) {
-        next(to);
+        next();
       } else {
-        next(from);
+        next({ path: "/" });
       }
     },
   },
